@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.Set;
+/* https://leetcode-cn.com/problems/perfect-rectangle/submissions/ */
 
 public class Solution {
 
@@ -24,7 +25,7 @@ public class Solution {
             add(x, y, set);
             add(a, b, set);
             add(x, b, set);
-            add(y, a, set);
+            add(a, y, set);
 
             area += (a - x) * (b - y);
         }
@@ -34,7 +35,7 @@ public class Solution {
         return set.size() == 4 &&
                 set.contains(key(x1, y1)) &&
                 set.contains(key(x2, y2)) &&
-                set.contains(key(x1,y2)) &&
+                set.contains(key(x1, y2)) &&
                 set.contains(key(x2, y1));
     }
 
