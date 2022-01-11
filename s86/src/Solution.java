@@ -16,6 +16,7 @@ public class Solution {
                 }
                 if (num.charAt(i + 1) == '0') break;
             }
+            if (num.charAt(0) == '0') break;
         }
         return false;
     }
